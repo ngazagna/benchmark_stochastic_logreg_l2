@@ -16,6 +16,7 @@ class Objective(BaseObjective):
     def __init__(self, lmbd=.1, fit_intercept=False):
         self.lmbd = lmbd
         self.fit_intercept = fit_intercept
+        # self.label = "test error"
 
     def set_data(self, X, y):
         # Train test split

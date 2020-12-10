@@ -13,9 +13,6 @@ class Solver(BaseSolver):
     def set_objective(self, X, y, lmbd):
         self.X, self.y, self.lmbd = X, y, lmbd
 
-    # def loss_logreg(w, X, y):
-    #     return np.sum(np.log(1 + np.exp(-y * (X @ w))))
-
     def run(self, n_iter):
         n_samples, n_features = self.X.shape
         w = np.zeros(n_features)
