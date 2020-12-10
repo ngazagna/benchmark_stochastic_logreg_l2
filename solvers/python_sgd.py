@@ -8,13 +8,13 @@ class Solver(BaseSolver):
     name = 'Python-SGD'  # stochastic gradient descent
 
     # any parameter defined here is accessible as a class attribute
-    parameters = {'step_init': [1., 10., 1000]}
+    parameters = {'step_init': [1.]}
 
     def set_objective(self, X, y, lmbd):
         self.X, self.y, self.lmbd = X, y, lmbd
 
-    def loss_logreg(w, X, y):
-        return np.sum(np.log(1 + np.exp(-y * (X @ w))))
+    # def loss_logreg(w, X, y):
+    #     return np.sum(np.log(1 + np.exp(-y * (X @ w))))
 
     def run(self, n_iter):
         n_samples, n_features = self.X.shape
