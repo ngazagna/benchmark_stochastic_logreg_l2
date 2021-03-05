@@ -8,7 +8,8 @@ class Objective(BaseObjective):
     name = "Stochastic L2 Logistic Regression"
 
     parameters = {
-        'lmbd': [1., 0.01]
+        # 'lmbd': [1., 0.01]
+        'lmbd': [1e-16]
     }
 
     def __init__(self, lmbd=.1):

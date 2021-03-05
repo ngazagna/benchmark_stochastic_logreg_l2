@@ -14,14 +14,14 @@ class Dataset(BaseDataset):
         ]
     }
 
-    def __init__(self, n_samples=1_000, n_features=2, rho=0., random_state=42):
+    def __init__(self, n_samples=100, n_features=2, rho=0., random_state=42):
         self.n_samples = n_samples
         self.n_features = n_features
         self.rho = rho
         self.random_state = random_state
 
     def get_data(self):
-        n_samples = 2 * self.n_samples  # take half of train and half for test
+        n_samples = self.n_samples + 10  # take half of train and half for test
         X, y, _ = make_correlated_data(n_samples, self.n_features,
                                        rho=self.rho,
                                        random_state=self.random_state)
