@@ -27,3 +27,6 @@ class Objective(BaseObjective):
     def to_dict(self):
         # return train data to solver
         return dict(X=self.X_train, y=self.y_train, lmbd=self.lmbd)
+
+    # def stop_criterion(self):
+    #     ...
