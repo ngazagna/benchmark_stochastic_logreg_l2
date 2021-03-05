@@ -14,6 +14,7 @@ class Objective(BaseObjective):
 
     def __init__(self, lmbd=.1):
         self.lmbd = lmbd
+        self.compute_loss_on_test = True
 
     def set_data(self, X_train, X_test, y_train, y_test):
         self.X_train, self.X_test, self.y_train, self.y_test = \
